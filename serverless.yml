@@ -1,0 +1,44 @@
+service: misever-email
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: test
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - ses:*
+      Resource: "*"
+
+plugins:
+  - serverless-python-requirements
+
+package:
+  individually: true
+  exclude:
+    - "**/**"
+  include:
+    - "src/**"
+
+
+functions:
+  send_email:
+    handler: src.send_email.lambda_handler
+    description: Permite enviar un correo electronico
+    memorySize: 1024
+    timeout: 30
+    reservedConcurrency: 5
+    # environment:
+    #   APPRAISAL_STEPMACHINE_ARN: "VALUE"
+
+    events:
+      - http:
+          path: api/v1/send/email
+          method: post
+          cors:
+            origin: '*'
+            headers:
+              - Authorization
+              - X-Authorization
+              - X-Api-Key

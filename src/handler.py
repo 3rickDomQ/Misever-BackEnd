@@ -8,6 +8,7 @@ from src.libs.aws_postman import AWSPostman
 
 
 def lambda_handler(event, context):
+	print(event)
 	postman = AWSPostman()
 	postman.add_Sender('stxtest2021@gmail.com')
 	postman.add_Recipient('francisco.germain@gmail.com')
@@ -21,7 +22,10 @@ def lambda_handler(event, context):
 	return {
 		"statusCode": 200,
 		"headers": {
-		"Content-Type": "application/json"
+			"Content-Type": "application/json",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Origin": "\'*\'",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
 		},
 		"body": json.dumps({
 		"detail": "Envío Exitoso!"

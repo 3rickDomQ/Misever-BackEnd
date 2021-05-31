@@ -24,6 +24,6 @@ def lambda_handler(event, context):
 		"Content-Type": "application/json"
 		},
 		"body": json.dumps({
-		"detail ": "Envío Exitoso!"
+		"detail": "Envío Exitoso!"
 		})
 	}

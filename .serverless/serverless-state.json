@@ -186,7 +186,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/misever-email/test/1622504484651-2021-05-31T23:41:24.651Z/send_email.zip"
+                "S3Key": "serverless/misever-email/test/1622506220246-2021-06-01T00:10:20.246Z/send_email.zip"
               },
               "Handler": "src.send_email.lambda_handler",
               "Runtime": "python3.6",
@@ -206,14 +206,14 @@
               "SendUnderscoreemailLogGroup"
             ]
           },
-          "SendUnderscoreemailLambdaVersionQhnG9fNKdq6mxs8ailiVx7apcRZfZCn1BKUB5NUo": {
+          "SendUnderscoreemailLambdaVersionlldXt8AfQn660MWiCN1Zuf7SrPs1O3pZD1oUuAxorbQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SendUnderscoreemailLambdaFunction"
               },
-              "CodeSha256": "Gytg+ik1l+uhtr7ZK0NDX6++gCxhCWQBageQK+rLCUs=",
+              "CodeSha256": "7v7hrt/cQahHg9pctyFOYOqWSpoRiLyyKKU83GEZse4=",
               "Description": "Permite enviar un correo electronico"
             }
           },
@@ -368,7 +368,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1622504475115": {
+          "ApiGatewayDeployment1622506210722": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -431,7 +431,7 @@
           "SendUnderscoreemailLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SendUnderscoreemailLambdaVersionQhnG9fNKdq6mxs8ailiVx7apcRZfZCn1BKUB5NUo"
+              "Ref": "SendUnderscoreemailLambdaVersionlldXt8AfQn660MWiCN1Zuf7SrPs1O3pZD1oUuAxorbQ"
             },
             "Export": {
               "Name": "sls-misever-email-test-SendUnderscoreemailLambdaFunctionQualifiedArn"
@@ -590,7 +590,7 @@
         "memory": 1024,
         "runtime": "python3.6",
         "vpc": {},
-        "versionLogicalId": "SendUnderscoreemailLambdaVersionQhnG9fNKdq6mxs8ailiVx7apcRZfZCn1BKUB5NUo"
+        "versionLogicalId": "SendUnderscoreemailLambdaVersionlldXt8AfQn660MWiCN1Zuf7SrPs1O3pZD1oUuAxorbQ"
       }
     },
     "configValidationMode": "warn",
@@ -614,7 +614,7 @@
         "include": [
           "src/**"
         ],
-        "artifactDirectoryName": "serverless/misever-email/test/1622504484651-2021-05-31T23:41:24.651Z"
+        "artifactDirectoryName": "serverless/misever-email/test/1622506220246-2021-06-01T00:10:20.246Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -624,7 +624,7 @@
   },
   "package": {
     "individually": true,
-    "artifactDirectoryName": "serverless/misever-email/test/1622504484651-2021-05-31T23:41:24.651Z",
+    "artifactDirectoryName": "serverless/misever-email/test/1622506220246-2021-06-01T00:10:20.246Z",
     "artifact": ""
   }
 }
